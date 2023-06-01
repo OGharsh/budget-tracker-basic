@@ -61,7 +61,7 @@ function generateID(){
 //Add Trasactions to DOM list
 function addTransactionDOM(transaction) {
   //GET sign
-  const sign = transaction.amount < 0 ? "-" : "+";
+  const sign = transaction.amount < 0 ? "-" : "+₹";
   const item = document.createElement("li");
 
   //Add Class Based on Value
@@ -98,9 +98,10 @@ function updateValues() {
       .reduce((acc, item) => (acc += item), 0) *
     -1).toFixed(2);
 
-    balance.innerText=`$${total}`;
-    money_plus.innerText = `$${income}`;
-    money_minus.innerText = `$${expense}`;
+    balance.innerText = `₹${total}`;
+    money_plus.innerText = `₹${income}`;
+    money_minus.innerText = `₹${expense}`;
+
 }
 
 
