@@ -1,6 +1,10 @@
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-    0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --primary-color: #f39c12;
+  --primary-light-color: #f8c471;
+  --income-color: #2ecc71;
+  --expense-color: #c0392b;
+  --background-color: #fff;
 }
 
 * {
@@ -15,14 +19,23 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-top: 0;
 }
 
 .container {
   margin: 30px auto;
   width: 350px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 h1 {
@@ -39,15 +52,17 @@ h3 {
 h4 {
   margin: 0;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .inc-exp-container {
-  background-color: #fff;
-  box-shadow: var(--box--shadow);
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  border-radius: 8px;
 }
 
 .inc-exp-container > div {
@@ -60,36 +75,40 @@ h4 {
 }
 
 .money {
-  font-size: 2;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   margin: 5px 0;
 }
+
 .money-plus {
-  color: #2ecc71;
+  color: var(--income-color);
 }
 
 .money-minus {
-  color: #c0392b;
+  color: var(--expense-color);
 }
 
 label {
   display: inline-block;
   margin: 10px 0;
+  color: var(--primary-color);
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="date"] {
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;
   font-size: 16px;
   padding: 10px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -98,11 +117,25 @@ input[type="number"] {
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-light-color);
 }
 
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
+}
+
+.btn-income {
+  background-color: var(--income-color);
+}
+
+.btn-expense {
+  background-color: var(--expense-color);
 }
 
 .list {
@@ -112,22 +145,23 @@ input[type="number"] {
 }
 
 .list li {
-  background-color: #fff;
-  box-shadow: var(--box--shadow);
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;
+  border-radius: 8px;
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid var(--income-color);
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  border-right: 5px solid var(--expense-color);
 }
 
 .delete-btn {
@@ -144,8 +178,40 @@ input[type="number"] {
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 4px;
 }
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.transaction-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-left: 10px;
+}
+
+#spendingChart {
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+/* Style for the button to open the chart in a new tab */
+#open-chart {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#open-chart:hover {
+  background-color: var(--primary-light-color);
 }
