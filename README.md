@@ -49,16 +49,6 @@ Budget Buddy is a simple and user-friendly budget tracker that helps you manage 
 3. **Viewing Spending Graphs**:
     - Scroll down to the "Spending Chart" section to view your income and expenses for each month of the year.
 
-## File Structure
-
-budget-tracker-basic/
-│
-├── index.html # The main HTML file
-├── style.css # The main CSS file
-├── script.js # The main JavaScript file
-└── README.md # This README file
-
-
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request with any improvements or bug fixes.
