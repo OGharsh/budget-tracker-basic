@@ -51,7 +51,7 @@ function generateID() {
 // Add transaction to DOM list
 function addTransactionDOM(transaction) {
   // Get sign
-  const sign = transaction.amount < 0 ? "-" : "+₹";
+  const sign = transaction.amount < 0 ? "-₹" : "+₹";
   const item = document.createElement("li");
 
   // Add class based on value
@@ -73,8 +73,8 @@ function updateValues() {
   const expense = (amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) * -1).toFixed(2);
 
   balance.innerText = `₹${total}`;
-  money_plus.innerText = `₹${income}`;
-  money_minus.innerText = `₹${expense}`;
+  money_plus.innerText = `+₹${income}`;
+  money_minus.innerText = `-₹${expense}`;
 }
 
 // Remove transaction by ID

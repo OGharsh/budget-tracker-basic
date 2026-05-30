@@ -16,6 +16,10 @@ Budget Buddy is a simple and user-friendly budget tracker that helps you manage 
 - **JavaScript**: Functionality and interactivity.
 - **Chart.js**: Library for creating the spending charts.
 
+## Environment Setup
+
+No environment variables are required. Data is stored locally in the browser with `localStorage`.
+
 ## Installation
 
 1. **Clone the repository**:
@@ -48,6 +52,29 @@ Budget Buddy is a simple and user-friendly budget tracker that helps you manage 
 
 3. **Viewing Spending Graphs**:
     - Scroll down to the "Spending Chart" section to view your income and expenses for each month of the year.
+
+## Screenshots
+
+Add screenshots here before sharing the project.
+
+## Deployment
+
+Recommended platform: GitHub Pages.
+
+Why: this is a static HTML/CSS/JavaScript app with no build step.
+
+### GitHub Pages Steps
+
+1. Push the repository to GitHub.
+2. Open repository settings.
+3. Go to `Pages`.
+4. Select the `main` branch and root folder.
+5. Save and test the generated Pages URL.
+
+## Known Limitations
+
+- Transactions are stored per browser/device using `localStorage`.
+- Chart.js is loaded from a CDN, so internet access is required for charts.
 
 ## Contributing
 
