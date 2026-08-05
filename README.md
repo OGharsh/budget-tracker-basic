@@ -36,9 +36,7 @@ Deploy this on GitHub Pages.
 
 It is a static app with no backend, build command, or environment variables. Netlify and Vercel also work, but GitHub Pages is the most direct free option.
 
-## Recruiter note
 
-This is a decent small JavaScript project because it has state, persistence, filtering, and charting. It is worth showing if you add a screenshot and a live link. It should sit below your React and ML projects.
 
 ## Limitations
 
