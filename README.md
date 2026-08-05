@@ -1,90 +1,48 @@
 # Budget Buddy
 
-Budget Buddy is a simple and user-friendly budget tracker that helps you manage your finances by tracking your income and expenses. It includes features such as adding transactions, filtering by date, and visualizing spending trends with monthly graphs.
+Budget Buddy is a browser based budget tracker for recording income and expenses. It stores transactions in `localStorage` and uses Chart.js to show monthly income and expense totals.
 
 ## Features
 
-- **Add Income and Expenses**: Easily add transactions with descriptions, amounts, and dates.
-- **Date Filtering**: Filter transactions by specific dates to view your financial history.
-- **Spending Graphs**: Visualize your monthly spending with a bar chart, helping you understand your financial trends.
-- **Local Storage**: Your transaction data is saved in your browser's local storage, so your data persists even after refreshing the page.
+- Add income and expense transactions
+- Store transaction history in the browser
+- Remove transactions
+- Filter transactions by date
+- View monthly income and expense charts
+- Open the chart in a separate tab
 
-## Technologies Used
+## Tech stack
 
-- **HTML**: Structure of the application.
-- **CSS**: Styling for a clean, modern look.
-- **JavaScript**: Functionality and interactivity.
-- **Chart.js**: Library for creating the spending charts.
+- HTML5
+- CSS3
+- JavaScript
+- Chart.js
 
-## Environment Setup
+## Run locally
 
-No environment variables are required. Data is stored locally in the browser with `localStorage`.
+No installation is required.
 
-## Installation
+```bash
+python -m http.server 8000
+```
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/OGharsh/budget-tracker-basic.git
-    ```
+Open `http://localhost:8000`.
 
-2. **Navigate to the project directory**:
-    ```bash
-    cd budget-tracker-basic
-    ```
-
-3. **Open `index.html` in your browser**:
-    ```bash
-    open index.html
-    ```
-
-## Usage
-
-1. **Adding Transactions**:
-    - Enter a description in the "Text" field.
-    - Enter the amount in the "Amount" field (use the buttons to specify if it’s income or an expense).
-    - Enter the date of the transaction.
-    - Click "Add Income" or "Add Expense" to record the transaction.
-
-2. **Filtering Transactions**:
-    - Use the date filter to view transactions for a specific date.
-    - Click "Filter" to apply the filter.
-    - Click "Clear Filter" to remove the date filter and view all transactions.
-
-3. **Viewing Spending Graphs**:
-    - Scroll down to the "Spending Chart" section to view your income and expenses for each month of the year.
-
-## Screenshots
-
-Add screenshots here before sharing the project.
+You can also open `index.html` directly, although a local server is cleaner for browser testing.
 
 ## Deployment
 
-Recommended platform: GitHub Pages.
+Deploy this on GitHub Pages.
 
-Why: this is a static HTML/CSS/JavaScript app with no build step.
+It is a static app with no backend, build command, or environment variables. Netlify and Vercel also work, but GitHub Pages is the most direct free option.
 
-### GitHub Pages Steps
+## Recruiter note
 
-1. Push the repository to GitHub.
-2. Open repository settings.
-3. Go to `Pages`.
-4. Select the `main` branch and root folder.
-5. Save and test the generated Pages URL.
+This is a decent small JavaScript project because it has state, persistence, filtering, and charting. It is worth showing if you add a screenshot and a live link. It should sit below your React and ML projects.
 
-## Known Limitations
+## Limitations
 
-- Transactions are stored per browser/device using `localStorage`.
-- Chart.js is loaded from a CDN, so internet access is required for charts.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request with any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgements
-
-- [Chart.js](https://www.chartjs.org/) for providing an easy-to-use charting library.
-- All the tutorials and documentation that helped make this project possible.
+- Data is stored per browser and device
+- No authentication or cloud sync
+- Chart.js loads from a CDN, so charts need internet access
+- No automated tests
